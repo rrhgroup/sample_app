@@ -6,6 +6,7 @@ namespace :db do
     make_microposts
     make_relationships
   end
+
 end
 
 def make_users
@@ -23,6 +24,7 @@ def make_users
                  :password => password,
                  :password_confirmation => password)
   end
+
 end
 
 def make_microposts
@@ -40,4 +42,5 @@ def make_relationships
   followers  = users[3..40]
   following.each { |followed| user.follow!(followed) }
   followers.each { |follower| follower.follow!(user) }
+
 end
