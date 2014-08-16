@@ -16,8 +16,8 @@ describe UsersController do
 
       before(:each) do
         @user = test_sign_in(Factory(:user))
-        second = Factory(:user, :name => "Bob", :email => "another@example.com")
-        third  = Factory(:user, :name => "Ben", :email => "another@example.net")
+        second = Factory(:user, :name => "Bob", :email => "another@Example.com")
+        third  = Factory(:user, :name => "Ben", :email => "another@Example.net")
         
         30.times do
           Factory(:user, :name => Factory.next(:name),
